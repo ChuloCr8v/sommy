@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- bootstrap stylesheet link -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- font awesome stylesheet link -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+
+  <title>portfolio</title>
+</head>
+
+<body>
+
+  <!--header section -->
+
+  <header>
+    <div class="container header">
+      <!--nav bar -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+        <!--logo-->
+        <a class="navbar-brand font-weight-bolder col col-md-8" href="#">SO<span
+          class='text-danger font-weight-bold'>MM</span>Y
+        </a>
+
+        <!-- menu button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-menu"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="nav-menu">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" href="#">Home
+              <span class="sr-only">(current)</span>
+            </a>
+            <a class="nav-item nav-link" href="#about">About</a>
+            <a class="nav-item nav-link" href="#projects">Projects</a>
+            <a class="nav-item nav-link" href="#contact">Contact</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section id="hero" class="px-1 py-5">
+    <div class="container d-lg-flex align-items-center">
+
+      <!-- hero image -->
+      <div class="img-wrapper col-md-5 mx-auto my-5">
+        <img src="./images/hero.jpg" alt="sommy" class="hero-img img-fluid rounded-circle">
+      </div>
+
+      <!-- name and location -->
+      <div class="col-md-7 mx-auto">
+        <h1 class="name h2 font-weight-bolder text-center text-info">Chisom Ifebirinachi</h1>
+        <h4 class="location text-center">Lagos State, Nigeria</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- about me section -->
+
+  <section id="about" class="mt-5 px-1 py-5 bg-light">
+    <div class="container">
+
+      <!-- section heading -->
+      <h2 class="heading font-weight-bolder text-center">
+        About Me
+      </h2>
+
+      <!-- section content -->
+      <p class="about py-3 col-md-9 mx-auto">
+        I am Chisom Ifebirinachi. I am currently located in Lagos State, Nigeria. I am at the moment taking a course
+        in software development. My current stack at the moment includes
+        <span class="stack text-danger font-weight-bold">HTML,</span>
+        <span class="stack text-danger font-weight-bold">CSS,</span>
+        <span class="stack text-danger font-weight-bold">JavaScript,</span> etc.
+      </p>
+    </div>
+  </section>
+
+  <!-- enquiry section -->
+  <section id="contact" class="px-1 py-5">
+
+    <!-- section heading -->
+    <h2 class="heading text-center font-weight-bolder">Contact Me</h2>
+
+    <div class="container">
+
+      <!-- enquiry form -->
+      <form class="mt-5 border border-info rounded p-4 col-md-7 mx-auto">
+
+        <!-- full name input -->
+        <div class="form-group">
+          <label for="name"> Full Name</label>
+          <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="Your full name"
+          required>
+        </div>
+
+        <!-- email input -->
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" placeholder="Your email" required>
+        </div>
+
+        <!-- location input -->
+        <div class="form-group">
+          <label for="location">Location</label>
+          <input type="text" class="form-control" id="location" placeholder="Your location" required>
+        </div>
+
+        <!-- gender input -->
+        <div class="form-group">
+          <label for="gender">Gender</label>
+
+          <!-- male gender -->
+          <div class="input-group align-items-center">
+            <input type="radio" aria-label="male" name="gender" required>
+            <label for="male" class="ml-2 m-0">Male</label>
+          </div>
+
+          <!-- female gender -->
+          <div class="input-group align-items-center mt-2">
+            <input type="radio" aria-label="male" name="gender" required>
+            <label for="male" class="ml-2 m-0">Female</label>
+          </div>
+        </div>
+
+        <!-- submit button -->
+        <button type="submit" class="btn btn-primary" style="width: 100%;">
+          Submit
+          <i class="fas fa-paper-plane ml-2"></i>
+        </button>
+
+      </form>
+
+    </div>
+  </section>
+
+  <!-- footer section -->
+  <footer class="pt-5 bg-dark text-light">
+    <div class="container">
+
+      <!-- contact -->
+      <div class="contact">
+
+        <!-- email -->
+        <div class="contact-group d-flex align-items-center mb-2">
+          <i class="fas fa-envelope"></i>
+          <p class="m-0 ml-2">
+            Joychisy@gmail.com
+          </p>
+        </div>
+
+        <!-- phone number -->
+        <div class="contact-group d-flex align-items-center mb-2">
+          <i class="fas fa-phone icon"></i>
+          <p class="m-0 ml-2">
+            +234816 773 4962
+          </p>
+        </div>
+
+        <!-- address -->
+        <div class="contact-group d-flex align-items-center mb-2">
+          <i class="fas fa-map icon"></i>
+          <p class="m-0 ml-2">
+            Lagos, Nigeria
+          </p>
+        </div>
+
+      </div>
+
+      <!-- copyright -->
+      <div class="copyright bg-light text-dark mt-4 p-2">
+        <p class="lead small text-center mb-0">
+          Copyright 2021 DSFE SOFTWARE DEVELOPMENT, ALL RIGHTS RESERVED
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!--import bootstrap script -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
