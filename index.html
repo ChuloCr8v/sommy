@@ -16,7 +16,7 @@
   <title>portfolio</title>
 </head>
 
-<body>
+<body style="background-image: url(./images/hero.jpg); background-size: cover; background-position: center">
 
   <!--header section -->
 
@@ -59,7 +59,7 @@
       </div>
 
       <!-- name and location -->
-      <div class="col-md-7 mx-auto">
+      <div class="col-md-7 mx-auto text-white">
         <h1 class="name h2 font-weight-bolder text-center text-info">Chisom Ifebirinachi</h1>
         <h4 class="location text-center">Lagos State, Nigeria</h4>
       </div>
@@ -101,7 +101,7 @@
         <!-- full name input -->
         <div class="form-group">
           <label for="name"> Full Name</label>
-          <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="Your full name" required 
+          <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="Your full name" required
           >
         </div>
 
@@ -141,7 +141,7 @@
         </button>
 
       </form>
-     <div class="users">
+      <div class="users">
       </div>
     </div>
   </section>
@@ -203,9 +203,9 @@
   <script>
 
     const getUserData = (e) => {
-      e.preventDefault() 
-      
-      
+      e.preventDefault()
+
+
       let formData = {
         name: document.getElementById('name').value,
         userLocation: document.getElementById('locatn').value,
@@ -214,76 +214,76 @@
 
 
       }
-      
+
       let gender = document.querySelectorAll('#gender')
-      
-      for(i = 0; i < gender.length; i++){
-        if(gender[i].checked){
+
+      for (i = 0; i < gender.length; i++) {
+        if (gender[i].checked) {
           let genderData = gender[i].value
-          let gen ={
+          let gen = {
             gend: genderData
           }
           localStorage.setItem('gen', JSON.stringify(gen))
-         console.log(localStorage.getItem('gen'))
+          console.log(localStorage.getItem('gen'))
         }
       }
-      
+
 
       localStorage.setItem('formData', JSON.stringify(formData))
-      
+
       console.log(localStorage.getItem('formData'))
-      
+
       showData()
     }
 
     const showData = () => {
-      
-        
-     
-        let {
-          name,
-          email,
-          userLocation
-        } = JSON.parse(localStorage.getItem('formData'))
-        
-        let {
-          gend
-        } = JSON.parse(localStorage.getItem('gen'))
-        
 
-        let users = document.querySelector('.users')
-        users.innerHTML = `
-        <!-- Modal --> 
-        <div class="modal fade" id="info" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"> 
-          <div class="modal-dialog" role="document"> 
-            <div class="modal-content"> 
-              <div class="modal-header"> 
-                <h5 class="modal-title" id="exampleModalLabel">Your Information</h5> 
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span>
-                </button> 
-             </div> 
-             <div class="modal-body">
-              
-                <p>Name: ${name}</p>
-                <p>Email: ${email}</p>
-                <p>Location: ${userLocation}</p>
-                <p>Gender: ${gend}</p>
-             </div> 
-             <div class="modal-footer"> 
-               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> 
-             </div>
-          </div> 
-        </div> 
+
+
+      let {
+        name,
+        email,
+        userLocation
+      } = JSON.parse(localStorage.getItem('formData'))
+
+      let {
+        gend
+      } = JSON.parse(localStorage.getItem('gen'))
+
+
+      let users = document.querySelector('.users')
+      users.innerHTML = `
+      <!-- Modal -->
+      <div class="modal fade" id="info" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+      <div class="modal-content">
+      <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">Your Information</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span>
+      </button>
       </div>
-  
-        `
-        
-     document.querySelector('#name').value = ""
-     document.querySelector('#email').value = ""
-     document.querySelector('#locatn').value = ""
-     document.querySelector('#gender').checked = false
-     
-    } 
+      <div class="modal-body">
+
+      <p>Name: ${name}</p>
+      <p>Email: ${email}</p>
+      <p>Location: ${userLocation}</p>
+      <p>Gender: ${gend}</p>
+      </div>
+      <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+      </div>
+      </div>
+      </div>
+
+      `
+
+      document.querySelector('#name').value = ""
+      document.querySelector('#email').value = ""
+      document.querySelector('#locatn').value = ""
+      document.querySelector('#gender').checked = false
+
+    }
 
 
   </script>
