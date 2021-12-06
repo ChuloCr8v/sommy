@@ -1,3 +1,7 @@
+
+
+
+
 const number = Number(prompt('Enter Number'))
 
 if (number < 20) {
@@ -15,3 +19,7 @@ for (i = 0; i < 10; i++) {
     console.log('This is Loop 5. I will continue the iteration until I get to 9 ☺ ')
   }
 }
+
+
+
+let day = Number(prompt('Enter a number between 1 and 7'))

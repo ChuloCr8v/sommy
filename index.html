@@ -60,8 +60,8 @@
 
       <!-- name and location -->
       <div class="col-md-7 py-5 mx-auto text-white">
-        <h1 class="name h2 font-weight-bolder text-center text-info">Chisom Ifebirinachi</h1>
-        <h4 class="location text-center">Lagos State, Nigeria</h4>
+        <h1 class="name h1 font-weight-bolder text-center text-white">Chisom Ifebirinachi</h1>
+        <h4 class="location text-center text-info">Lagos State, Nigeria</h4>
       </div>
     </div>
   </section>
@@ -91,7 +91,7 @@
   <section id="contact" class="px-1 py-5">
 
     <!-- section heading -->
-    <h2 class="heading text-center font-weight-bolder">Contact Me</h2>
+    <h2 class="heading text-white text-center font-weight-bolder">Contact Me</h2>
 
     <div class="container">
 
@@ -123,19 +123,19 @@
 
           <!-- male gender -->
           <div class="input-group align-items-center">
-            <input type="radio" id="gender" aria-label="male" name="gender" value="male" required>
+            <input type="radio" id="gender" aria-label="male" name="gender" value="male" onchange="triggerBtn()">
             <label for="male" class="male ml-2 m-0">Male</label>
           </div>
 
           <!-- female gender -->
           <div class="input-group align-items-center mt-2">
-            <input type="radio" value="female" id="gender" aria-label="female" name="gender" required>
+            <input type="radio" value="female" id="gender" aria-label="female" name="gender" onchange="triggerBtn() ">
             <label for="male" class="female ml-2 m-0">Female</label>
           </div>
         </div>
 
         <!-- submit button -->
-        <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#info" style="width: 100%;">
+        <button disabled type="submit" id="btn" class="btn btn-primary" data-toggle="modal" data-target="#info" style="width: 100%;">
           Submit
           <i class="fas fa-paper-plane ml-2"></i>
         </button>
@@ -202,9 +202,28 @@
 
   <script>
 
+    let btnSubmit = document.querySelector('#btn')
+    let names = document.querySelectorAll('#gender')
+
+    /* for (i = 0; i < names.length; i++) {
+      if (names[i].checked === true) {
+        btnSubmit.disabled = true
+        alert('checked')
+      }
+
+
+      if (names[i].checked === false) {
+        btnSubmit.disabled = false
+        alert('not changed ')
+      }
+    } */
+
+    triggerBtn = () => {
+      btnSubmit.disabled = false
+    }
+
     const getUserData = (e) => {
       e.preventDefault()
-
 
       let formData = {
         name: document.getElementById('name').value,
